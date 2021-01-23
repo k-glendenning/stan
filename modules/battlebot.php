@@ -473,7 +473,7 @@ function isPlural($thing) {
 
 function doActionStuff($bat, $chan, $members, $nick, $msg) {
 	$matched = false;
-	if($bat->checkAttkMatch("(?:attacks|stabs|fites) ([^ ]*)(?: with (.*))?", $msg, $nick)) {
+	if($bat->checkAttkMatch("(?:attacks|shanks|stabs|fites) ([^ ]*)(?: with (.*))?", $msg, $nick)) {
 			$result = $bat->doAttacking($bat->attacker, $bat->victim, $bat->weapon);
 			/* [0]/["type"] = type of result: normal, fatalNormal, crit, fatalCrit, miss
 			 * [1]/["dmg"] = damage done
